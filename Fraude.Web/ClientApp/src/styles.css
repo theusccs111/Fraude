@@ -1,16 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("./assets/css/global.css");
+@import url("./assets/css/navbar.css");
+@import url("./assets/css/button.css");
+@import url("./assets/css/cards/card.css");
+@import url("./assets/css/texts/text.css");
+@import url("./assets/css/form.css");
+@import url("./assets/css/table.css");
+@import url("./assets/css/modal.css");
+@import url("./assets/css/alerts/alert.css");
+@import url("./assets/css/menu/menu.css");
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-code {
-  color: #e01a76;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}

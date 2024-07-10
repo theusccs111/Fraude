@@ -1,0 +1,88 @@
+.theTable {
+    padding: 2px;
+    border-radius: 10px;
+}
+
+table {
+    font-family: 'Segoe Pro Regular';
+    background-color: none!important;
+}
+
+table thead tr {
+    background-color: white;
+}
+
+table th{
+    font-family: 'Segoe Pro Semibold'!important;
+    font-size: 0.75rem!important;
+    color: #6674b3!important;
+    vertical-align: middle!important;
+    border-bottom: none;
+    background-color: white!important;
+}
+
+table small {
+    font-size: 0.833rem!important;
+}
+
+table td > i, table td div > i, table td span > i {
+    font-size: 1.25rem;
+    color: #243481!important;
+    cursor: pointer;
+}
+
+table td {
+    vertical-align: middle!important;
+}
+
+.options-container i:first-of-type {
+  margin-right: 10px;
+}
+
+.options-container i {
+  font-size: 1.375rem;
+}
+
+
+.ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    display: none;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 0!important;
+}
+
+
+.table td, .table th{
+    border-color: rgb(141 142 143 / 8%)!important;
+}
+
+.table td {
+    font-family: 'Segoe Pro Light';
+    font-size: 0.833rem!important;
+    color: #555555;
+}
+
+/* Ant Design Custom CSS */
+
+.ant-table-ping-right .ant-table-cell-fix-right-first::after, .ant-table-ping-right .ant-table-cell-fix-right-last::after, .ant-table-ping-right:not(.ant-table-has-fix-right) .ant-table-container::after {
+    box-shadow: inset -10px 0 8px -8px rgb(0 0 0 / 0%);
+}
+
+.ant-table-ping-left .ant-table-cell-fix-left-first::after, .ant-table-ping-left .ant-table-cell-fix-left-last::after, .ant-table-ping-left:not(.ant-table-has-fix-left) .ant-table-container::before {
+    box-shadow: inset 10px 0 8px -8px rgb(0 0 0 / 0%);
+}
+
+.ant-table-pagination.ant-pagination {
+    margin: 16px!important;
+}
+
+.ant-table-tbody>tr.ant-table-row:hover>td, .ant-table-tbody>tr>td.ant-table-cell-row-hover {
+    background: #fff5e4;
+}
+
+.gray-td {
+    background-color: #ececec;
+}
+

@@ -56,7 +56,7 @@ namespace Fraude.Web.Controllers
                 var imageUrls = filePaths.Select(filePath =>
                 {
                     var fileName = Path.GetFileName(filePath);
-                    var fileUrl = $"/api/image/download/{fileName}";
+                    var fileUrl = $"/download/{fileName}";
                     return new { FileName = fileName, FileUrl = fileUrl };
                 }).ToList();
 
@@ -81,7 +81,7 @@ namespace Fraude.Web.Controllers
             try
             {
                 var fileBytes = System.IO.File.ReadAllBytes(filePath);
-                return File(fileBytes, "image/jpeg"); // Altere o MIME type conforme o tipo da imagem
+                return File(fileBytes, "image/jpg"); // Altere o MIME type conforme o tipo da imagem
             }
             catch (Exception ex)
             {

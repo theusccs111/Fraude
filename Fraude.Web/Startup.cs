@@ -1,3 +1,4 @@
+using Fraude.Web.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -21,7 +22,7 @@ namespace Fraude.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            services.ConfigureCorsService(Configuration);
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -51,7 +52,7 @@ namespace Fraude.Web
             }
 
             app.UseRouting();
-
+            app.UseCors("CorsPolicy");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -66,9 +67,10 @@ namespace Fraude.Web
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
+                    //spa.UseAngularCliServer(npmScript: "start");
                 }
             });
         }
+
     }
 }

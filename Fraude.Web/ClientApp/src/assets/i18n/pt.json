@@ -1,0 +1,154 @@
+{
+  "HOME": {
+    "SELECT": "Mudar idioma"
+  },
+
+  "SIDEBAR": {
+    "WELCOME": "Avaliação dos Colaboradores",
+    "firstround": "Avaliação Primeira Rodada",
+    "secondround": "Avaliação Segunda Rodada",
+    "division": "Divisão do Bônus",
+    "matrix": "Matriz PGE",
+    "monitorfilters": "Omitir filtros",
+    "toclean": "Limpar",
+    "contributorName": "Nome do colaborador",
+    "exportrankinginPDF": "Exportar ranqueamento em PDF",
+    "exportrankinginExcel": "Exportar ranqueamento em Excel",
+    "exportrankinginE-mail": "Enviar PDFs por e-mail",
+    "viewobjectivenote": "Visualizar nota objetiva",
+    "filter": "Filtros",
+    "contributor": "Limpar",
+    "importcollaboratorsfromexcel": "Importar Colaboradores Do Excel ",
+    "Importindividualnotes": "Importar notas individuals",
+    "contributors": "Colaboradores",
+    "filterr": "Filtrar",
+    "register": "Cadastrar novo grupo concorrente",
+    "import": "Importar Grupos Concorrentes Do Excel",
+    "register new management unit": "Cadastrar Nova Unidade Gerencial",
+    "Import management units from excel": "Importar Unidades Gerenciais do Excel",
+    "headQuarters": "Matriz PGE",
+    "ranking": "Ranqueamento",
+    "groups": "Grupos Concorrentes",
+    "objectives": "Visualizar nota objetiva",
+    "headquartersPPME": "Matriz PPME",
+    "MembersUGS": "Membros UGs",
+    "pge-dashboard": "Painel de controle PGE"
+  },
+
+  "evaluationNav": {
+    "1stBtn": "Exibir Filtros",
+    "hideFilters": "Omitir Filtros",
+    "2ndBTn": "Visualizar nota objetiva",
+    "3rdBtn": "Concluir processo",
+    "exportBtn": "Exportar Matriz",
+    "logOut": "Sair",
+    "cadastrar novo item": "Cadastrar novo item",
+    "Importar hierarquia do excel": "Importar hierarquia do excel"
+
+
+
+  },
+
+  "evaluation": {
+    "cycles": "Ciclo",
+    "SystemManagment": "Gerenciamento do sistema",
+    "filters": "Fitros",
+    "additional bonus": "Bônus Adicional",
+    "To apply": "Aplicar",
+    "jobClassification": "Classificação de cargo",
+    "Ranking": "Ranking",
+    "ContributorName": "Nome do colaborador",
+    "ToClean": "Limpar",
+    "Filter": "Filtrar",
+    "export matrix": "Exportar Matriz"
+
+
+  },
+
+  "systemManagmentDrp": {
+    "cycles": "Ciclos",
+    "HierarchicalItems": " Itens de hierarquia",
+    "CompetitionGroup": "Grupos Concorrentes",
+    "ManagementUnit": " Unidades Gerenciais",
+    "AccessPermition": "Permissões de acesso:",
+    "SystemParameter": "Parâmetros do sistema"
+  },
+ 
+  "tableHeaders": {
+    "CompetitorGroup": "Grupo Concorrente",
+    "JobClassification": "Classificação de Cargo",
+    "Registration": "Matrícula",
+    "ContributorName": "Nome de colaborador",
+    "NoteIC": "Nota IC",
+    "ObjectiveNote": "Nota objetiva",
+    "Ranking": "Ranking",
+    "rankingPosition": "Posição no ranking",
+    "justification": "Justificativa",
+    "Quiz": "Questionário",
+    "RankinyearBefore": "Ranking ano ant.",
+    "YearObjectiveScore": "Nota Obj. Ano Ant.",
+    "management unit": "Unidades Gerenciais",
+    "headquartersPPME": "Matriz PPME"
+
+
+
+
+  },
+
+  "secondRound": {
+    "Group Concerente": "Grupo concorrente",
+    "Clasficado de Cargo": "Classificação de cargo",
+    "Matricula": "Matrícula",
+    "Nomo de colaborator": "Nome do colaborador",
+    "Nome colaborator": "Nome colaborador",
+    "Nota Individual": "Nota individual",
+    "Unidade Gerencial": "Unidade Gerencial",
+    "Meses Trabalhados": "Meses Trabalhados",
+    "Faltas": "Faltas",
+    "Periculosidade (R$)": "Periculosidade (R$)",
+    "Salario (R$)": "Salário (R$)",
+    "Nota IC": "Nota IC",
+    "Nota objectiva": "Nota objetiva",
+    "Avaliação Primeira Rodada": "Avaliação Primeira Rodada",
+    "Nota Subjetiva 1 (0 a 15)": "Nota Subjetiva 1 (0 a 15)",
+    "Nota Subjetiva 2 (0 a 15)": "Nota Subjetiva 2 (0 a 15)",
+    "Ranking": "Ranking",
+    "Codigo": "Código",
+    "Title": "Título",
+    "Rankingnot": "Não calcular Ranking",
+    "Posicao Ranking": "Posição Ranking",
+    "Base do Valor Ref.": "Base do Valor Ref.",
+    "Multiplo do Salario": "Múltiplo Salário",
+    "Bônus Calculado": "Bônus Calculado",
+    "Desconto Bônus": "Desconto Bônus",
+    "Ranking Ano Ant.": "Ranking ano ant.",
+    "Nota Obj. Ano Ant.": "Nota Obj. Ano Ant.",
+    "Bônus Calc. Ano Ant..": "Bônus Calc. Ano Ant..",
+    "Bônus Final": "Bônus Final",
+    "Nota Final": "Nota final",
+    "Enviar e-mail": "Enviar e-mail",
+    "Questinano": "Questionário",
+    "Justificativa": "Justificativa",
+    "Acoes": "Ações"
+  },
+
+  "pge-dashboard": {
+    "NavTitle": "Painel de controle PGE",
+    "Avisos": "Avisos",
+    "Matriz": "Matriz PGE",
+    "Acessar": "Acessar",
+    "Avaliação 1a rodada": "Avaliação 1ª rodada",
+    "andamento da primeira rodada de avaliacoes": "Andamento da primeira rodada de avaliações",
+    "Divisão Do Bônus": "Divisão do bônus"
+
+  },
+
+  "ranking": {
+    "pdf-button": "Exportar para PDF",
+    "excel-button": "Exportar para Excel",
+    "mail-button": "Enviar PDFs por e-mail",
+    "Posicao no Ranking": "Posição no ranking",
+    "Bonus Final (R$)": "Bonus Final (R$)"
+  }
+
+}

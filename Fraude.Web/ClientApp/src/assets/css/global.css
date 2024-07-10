@@ -1,0 +1,160 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Segoe Pro Regular", Arial, Helvetica, sans-serif !important;
+}
+
+h5 {
+  margin-bottom: 0rem;
+}
+.inner-content {
+  padding: 0px !important;
+}
+
+p {
+  margin-bottom: 0rem;
+}
+.ant-steps-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-badge-status-dot {
+  width: 10px!important;
+  min-width: 6px;
+  height: 10px!important;
+
+}
+
+.ant-badge-status-text {
+  font-size: 0.833rem !important;
+}
+
+/* .ant-menu-item .ant-menu-item-icon, .ant-menu-item .anticon, .ant-menu-submenu-title .ant-menu-item-icon, .ant-menu-submenu-title .anticon{
+    font-size: 25px;
+} */
+
+/* .ant-menu.ant-menu-dark {
+ background-color: #303d8b;
+} */
+
+/* .menu-sidebar {
+ background-color: #303d8b;
+ width: 100%;
+
+ overflow-y: scroll;
+ overflow-x: hidden;
+
+} */
+/* .menu-sidebar::-webkit-scrollbar {
+    width: 0.5vw;
+   }
+   .menu-sidebar::-webkit-scrollbar-thumb {
+   background-color: #3a52dd;
+   border-radius: 5px;
+   }
+   .menu-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #1934d1;
+    }
+   .menu-sidebar::-webkit-scrollbar-track {
+    background-color: #051570;
+    } */
+
+/* .ant-select-item, .ant-select-item-empty{
+    padding: 0px 5px !important;
+} */
+.current {
+  background-color: #fda102 !important;
+  margin-bottom: 0px !important;
+}
+
+/* .ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark.ant-menu-inline .ant-menu-submenu-title {
+    width: 100%;
+    background-color: #303d8b;
+} */
+/* .ant-layout-sider-children {
+    height: 100%;
+    margin-top: -0.1px;
+    padding-top: 0.1px;
+} */
+
+/* .ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title, .ant-menu-vertical .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-item, .ant-menu-vertical-right .ant-menu-submenu-title
+{
+    height: 55px !important;
+} */
+.mainNav {
+  background-color: #303d8b;
+  color: white;
+}
+.mainNav a {
+  color: white;
+}
+
+button {
+  font-size: 13px !important;
+}
+
+/* .ant-menu-inline .ant-menu-item,
+.ant-menu-inline .ant-menu-submenu-title,
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-submenu-title,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-submenu-title {
+    height: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0 16px;
+    overflow: hidden;
+    line-height: 40px;
+    text-overflow: ellipsis;
+} */
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #1e2a67 #ffffff !important;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1e2a67 !important;
+  border-radius: 10px;
+  /* border: 3px solid #ffffff; */
+}
+
+
+
+
+.col1 input {
+  border: 0 !important;
+}
+
+
+.wordspacing {
+  white-space: nowrap;
+}
+
+.readonly {
+  background-color: rgb(245, 245, 245);
+}
+
+.ant-tooltip {
+  width: 300px;
+  max-width: 300px;
+}
+.ant-tooltip .ant-tooltip-inner {
+  padding: 15px;
+}

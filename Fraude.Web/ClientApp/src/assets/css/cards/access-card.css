@@ -1,0 +1,29 @@
+.access-card .card-header {
+  padding: 0 !important;
+  height: 128px;
+  background-position: center;
+  border-radius: 0.625rem 0.625rem 0 0 !important;
+}
+
+.access-card h4 {
+  font-size: 1.083rem;
+  font-family: "Segoe Pro Semibold";
+  color: #333333;
+  margin-bottom: 0;
+}
+
+.access-card .card-footer {
+  border-radius: 0;
+  background-color: transparent;
+  padding: 1.25rem;
+}
+
+.access-card .card-footer a {
+  font-family: "Segoe Pro Semibold";
+  font-size: 0.833rem;
+  color: #1e2a67;
+}
+
+.access-card .card-footer a:hover {
+  text-decoration: none;
+}

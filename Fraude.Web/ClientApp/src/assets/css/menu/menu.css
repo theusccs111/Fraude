@@ -1,0 +1,67 @@
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background-color: #2d3c8d;
+  font-family: "Segoe Pro Regular";
+}
+
+.ant-menu-submenu.current {
+  background: transparent !important;
+}
+
+.ant-menu-submenu-vertical.current {
+  background-color: #fda102 !important;
+}
+
+.ant-menu-vertical .ant-menu-item-group {
+  text-align: center;
+}
+
+.ant-menu-item i,
+.ant-menu-submenu i {
+  font-size: 1.25rem !important;
+}
+
+.ant-layout-sider-trigger {
+  background-color: #1e2a67;
+}
+
+.ant-menu-sub ul li {
+  padding-left: 24px !important;
+}
+
+.menu-icon > div {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.menu-icon > div:hover {
+  color: white !important;
+}
+
+.menu-icon > div > i {
+  order: 1;
+  margin-left: 5px;
+  font-size: 12px !important;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after {
+  border: none;
+}
+
+/* .ant-menu-item,
+.ant-menu-submenu > .ant-menu-submenu-title {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  padding-left: 20px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+} */

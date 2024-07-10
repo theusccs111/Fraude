@@ -1,0 +1,11 @@
+.navbar .navbar-brand {
+    color: #6674b3!important;
+    font-family: 'Segoe Pro Bold';
+    font-size: 1.625rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .infoBtn {
+    background-color: red;
+}

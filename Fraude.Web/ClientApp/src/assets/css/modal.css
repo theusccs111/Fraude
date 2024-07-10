@@ -1,0 +1,30 @@
+.ant-modal .ant-modal-title {
+  font-family: "Segoe Pro Semibold" !important;
+  color: #6674b3 !important;
+  font-size: 1.083rem;
+}
+
+.ant-modal .ant-modal-title h5 {
+  font-family: "Segoe Pro Semibold" !important;
+  color: #6674b3 !important;
+  font-size: 1.083rem;
+}
+
+.ant-modal span {
+  font-family: "Segoe Pro Light";
+  color: #999999;
+  font-size: 0.833rem;
+}
+
+.ant-modal nz-radio-group span {
+  color: inherit;
+}
+
+.ant-modal .ant-form label {
+  width: 100%;
+}
+
+.ant-modal .ant-modal-body {
+  max-height: 450px;
+  overflow: auto;
+}

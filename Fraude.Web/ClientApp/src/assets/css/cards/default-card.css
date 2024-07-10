@@ -1,0 +1,17 @@
+.card {
+    border-radius: 0.625rem!important;
+}
+
+.card-header {
+    background-color: #ffff!important;
+    padding: 1rem 0!important;
+    border-radius: 0!important;
+    background-color: transparent!important;;
+}
+.card-header h6 {
+    color: #6674b3!important;
+    font-family: 'Segoe Pro Semibold';
+    font-size: 1.083rem;
+    padding-left: 1rem;
+    margin: 0;
+}

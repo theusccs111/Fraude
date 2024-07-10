@@ -1,0 +1,14 @@
+<div class="color-selector">
+    <h2>Selecionar Cor</h2>
+    <div class="color-picker">
+        <label for="colorSelect">Escolha uma cor:</label>
+        <select id="colorSelect" (change)="onColorChange($event)">
+            <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+        </select>
+    </div>
+    <div *ngIf="currentColor" class="color-display">
+        <p>Cor atual:</p>
+        <div class="color-circle" [ngStyle]="{'background-color': currentColor}"></div>
+        <p><span [ngStyle]="{'color': currentColor}">{{ currentColor }}</span></p>
+    </div>
+</div>

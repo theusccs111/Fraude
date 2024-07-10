@@ -1,0 +1,32 @@
+<div class="file-uploader">
+    <h2>Importar Arquivos de Texto</h2>
+    <div class="upload-buttons">
+        <label class="custom-file-upload">
+            <input type="file" (change)="onFileChange($event, 'msg1')" />
+            Importar Mensagem 1
+        </label>
+        <label class="custom-file-upload">
+            <input type="file" (change)="onFileChange($event, 'msg2')" />
+            Importar Mensagem 2
+        </label>
+        <label class="custom-file-upload">
+            <input type="file" (change)="onFileChange($event, 'msg3')" />
+            Importar Mensagem 3
+        </label>
+    </div>
+    <button (click)="updateMessages()">Atualizar</button>
+    <div class="messages">
+        <div class="message-card">
+            <p><strong>Mensagem 1:</strong></p>
+            <p>{{ msg1 }}</p>
+        </div>
+        <div class="message-card">
+            <p><strong>Mensagem 2:</strong></p>
+            <p>{{ msg2 }}</p>
+        </div>
+        <div class="message-card">
+            <p><strong>Mensagem 3:</strong></p>
+            <p>{{ msg3 }}</p>
+        </div>
+    </div>
+</div>

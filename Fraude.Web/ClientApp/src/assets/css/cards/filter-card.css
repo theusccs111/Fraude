@@ -1,0 +1,19 @@
+.filter-card {
+    border: 1px solid rgb(228, 225, 225)!important;
+    border-radius: 10px!important;
+    width: 100%;
+    box-shadow: rgb(0 0 0 / 4%) 0px 5px 15px 0px!important;
+}
+
+.filter-card-header h6 {
+    color: #6674b3!important;
+    font-family: 'Segoe Pro Semibold';
+    font-size: 1.083rem;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.filter-card-header {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(228, 225, 225);
+}
