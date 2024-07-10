@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FraudeService } from '../services/fraude.service';
+import { Component, Input } from '@angular/core';
+import { FraudeService } from 'src/app/services/fraude.service';
 
 @Component({
   selector: 'app-file-uploader',
@@ -10,6 +10,9 @@ export class FileUploaderComponent {
   msg1: string = '';
   msg2: string = '';
   msg3: string = '';
+  
+  @Input()
+  podeAcessar: boolean
 
   constructor(
     private fraudeService: FraudeService

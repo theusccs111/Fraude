@@ -1,4 +1,4 @@
-﻿namespace Fraude.Web.Resource
+﻿namespace Fraude.Web.Resource.Response
 {
     public class TextFileResponse
     {

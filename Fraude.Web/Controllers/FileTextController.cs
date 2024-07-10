@@ -1,5 +1,5 @@
-﻿using Fraude.Web.Resource;
-using Fraude.Web.Resource.Request;
+﻿using Fraude.Web.Resource.Request;
+using Fraude.Web.Resource.Response;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

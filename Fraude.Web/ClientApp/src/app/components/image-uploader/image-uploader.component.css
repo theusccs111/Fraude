@@ -1,0 +1,58 @@
+.image-uploader {
+    width: 80%;
+    margin: auto;
+}
+
+.upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espaçamento entre os elementos */
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    flex: 1;
+    /* Expande para ocupar o espaço disponível */
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #d6d6d6;
+}
+
+.loading {
+    margin-top: 10px;
+}
+
+.carousel-container {
+    margin-top: 20px;
+}
+
+.carousel-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.picsum-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    /* Altura fixa para o carrossel */
+}
+
+.picsum-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Assegura que a imagem se ajuste dentro do contêiner sem distorcer */
+}

@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using Newtonsoft.Json;
 using Fraude.Web.Resource.Request;
+using Fraude.Web.Resource.Response;
 
 namespace Fraude.Web.Controllers
 {
@@ -23,11 +24,13 @@ namespace Fraude.Web.Controllers
             }
 
             var colorData = System.IO.File.ReadAllText(colorFilePath);
-            return Ok(colorData);
+            ColorResponse response = JsonConvert.DeserializeObject<ColorResponse>(colorData);
+
+            return Ok(response);
         }
 
         [HttpPost]
-        public IActionResult SetColor([FromBody] ColorRequest request)
+        public IActionResult SetColor([FromBody] ColorResponse request)
         {
             var allowedColors = new[] { "blue", "red", "yellow", "green" };
 
@@ -37,11 +40,11 @@ namespace Fraude.Web.Controllers
             }
 
             var colorData = new { color = request.Color };
-            var json = JsonConvert.SerializeObject(colorData, Newtonsoft.Json.Formatting.Indented);
+            var json = JsonConvert.SerializeObject(colorData);
 
             System.IO.File.WriteAllText(colorFilePath, json);
 
-            return Ok($"Color updated to {request.Color}.");
+            return Ok();
         }
     }
 }

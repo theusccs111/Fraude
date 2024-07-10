@@ -1,3 +1,8 @@
-<app-file-uploader></app-file-uploader>
-<app-image-uploader></app-image-uploader>
-<app-color-selector></app-color-selector>
+<div class="fraude-container">
+    <h1 class="page-title">Atenção</h1>
+    <div class="upload-section">
+        <app-image-uploader [podeAcessar]="podeAcessar"></app-image-uploader>
+        <app-file-uploader [podeAcessar]="podeAcessar"></app-file-uploader>
+    </div>
+    <app-color-selector [podeAcessar]="podeAcessar"></app-color-selector>
+</div>

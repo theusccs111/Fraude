@@ -6,13 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 import { FraudeComponent } from './pages/fraude/fraude.component';
 
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { ImageUploaderComponent } from './image-uploader/image-uploader.component';
-import { ColorSelectorComponent } from './color-selector/color-selector.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { ColorSelectorComponent } from './components/color-selector/color-selector.component';
+import { FileUploaderComponent } from './components/file-uploader/file-uploader.component';
+import { ImageUploaderComponent } from './components/image-uploader/image-uploader.component';
 
 registerLocaleData(en);
 
@@ -23,8 +24,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    FileUploaderComponent,
     FraudeComponent,
+    FileUploaderComponent,
     ImageUploaderComponent,
     ColorSelectorComponent,
   ],
@@ -34,6 +35,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

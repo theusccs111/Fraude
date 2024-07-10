@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { FraudeService } from '../services/fraude.service';
-import { environment } from '../../environments/environment';
+import { Component, Input } from '@angular/core';
+import { FraudeService } from 'src/app/services/fraude.service';
+import { environment } from 'src/environments/environment';
 
 var url2 = environment.api + '/FileImage';
 
@@ -15,6 +15,9 @@ export class ImageUploaderComponent {
   imageUrls: { fileName: string; fileUrl: string }[] = [];
   currentSlideIndex = 0;
 
+  @Input()
+  podeAcessar: boolean
+  
   constructor(private fraudeService: FraudeService) {
     this.loadImages();
   }
