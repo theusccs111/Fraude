@@ -10,10 +10,10 @@
             <input type="file" (change)="onFileChange($event, 'msg2')" />
             Importar Mensagem 2
         </label>
-        <label class="custom-file-upload">
+        <!-- <label class="custom-file-upload">
             <input type="file" (change)="onFileChange($event, 'msg3')" />
             Importar Mensagem 3
-        </label>
+        </label> -->
     </div>
     <button (click)="updateMessages()">Atualizar</button>
     </ng-container>
@@ -26,9 +26,9 @@
             <p><strong>Mensagem 2:</strong></p>
             <p>{{ msg2 }}</p>
         </div>
-        <div class="message-card">
+        <!-- <div class="message-card">
             <p><strong>Mensagem 3:</strong></p>
             <p>{{ msg3 }}</p>
-        </div>
+        </div> -->
     </div>
 </div>
