@@ -33,13 +33,12 @@ export class ColorSelectorComponent implements OnInit {
   onColorChange(event: Event): void {
     const selectElement = event.target as HTMLSelectElement;
     const selectedColor = selectElement.value;
-    debugger;
     this.updateColor(selectedColor);
   }
 
   private loadCurrentColor(): void {
     this.fraudeService.getColor().subscribe((res: any) => {
-        this.currentColor = res.color;
+      this.currentColor = res.color;
       },
       error => {
         console.error('Erro ao carregar a cor:', error);

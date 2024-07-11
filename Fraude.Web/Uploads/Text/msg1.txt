@@ -1,1 +1,1 @@
-teste 
+taskkill /f /im node.exe
