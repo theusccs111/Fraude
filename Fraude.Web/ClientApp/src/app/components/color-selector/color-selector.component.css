@@ -30,12 +30,13 @@ select {
     height: 100px;
     border-radius: 50%;
     display: inline-block;
-}
-
-.color-legend {
-    text-align: left;
+    margin: 0 auto;
 }
 
 .color-legend p {
     margin: 0;
+}
+
+.color-legend {
+    text-align: center;
 }
