@@ -8,7 +8,7 @@ import { IpService } from '../../services/ip.service';
 })
 export class FraudeComponent implements OnInit {
   ipAddress: string | undefined;
-  ipsPermitidos: string[] = ["177.134.105.23"]
+  ipsPermitidos: string[] = ["177.128.83.43, 177.128.84.102, 10.71.0.110"]
   podeAcessar = false;
 
   constructor(private ipService: IpService ) { }

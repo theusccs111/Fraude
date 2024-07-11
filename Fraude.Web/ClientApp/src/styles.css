@@ -9,3 +9,10 @@
 @import url("./assets/css/alerts/alert.css");
 @import url("./assets/css/menu/menu.css");
 
+body {
+    background-image: url('assets/images/sicoob-fundo.png');
+    background-size: cover; /* ou use "contain" dependendo do efeito desejado */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* para que a imagem permaneça fixa ao rolar a página */
+}
