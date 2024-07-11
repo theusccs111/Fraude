@@ -5,10 +5,14 @@
             <option *ngFor="let color of colors" [value]="color.id">{{ color.description }}</option>
         </select>
     </div>
-    <div *ngIf="currentColor" class="color-display">
-        <div class="color-circle" [ngStyle]="{'background-color': currentColor}"></div>
-        <div class="color-legend">
-            <p *ngFor="let legend of legends" [ngStyle]="{'color': legend.color}" [innerText]="legend.text"></p>
+    <div *ngIf="currentColor" class="color-display mt-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="color-circle" [ngStyle]="{'background-color': currentColor}"></div>
+                <div class="color-legend">
+                    <p *ngFor="let legend of legends" [ngStyle]="{'color': legend.color}" [innerText]="legend.text"></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
