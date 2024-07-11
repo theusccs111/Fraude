@@ -14,6 +14,7 @@ export class ImageUploaderComponent {
   uploading = false;
   imageUrls: { fileName: string; fileUrl: string }[] = [];
   currentSlideIndex = 0;
+  modalImageUrl: string = '';
 
   @Input()
   podeAcessar: boolean
@@ -86,5 +87,12 @@ export class ImageUploaderComponent {
     if (slides) {
       slides.style.transform = `translateX(-${this.currentSlideIndex * 100}%)`;
     }
+  }
+
+  showModal(imageUrl: string): void {
+    this.modalImageUrl = imageUrl;
+    const modalElement = document.getElementById('imageModal') as HTMLElement;
+    const modal = new (window as any).bootstrap.Modal(modalElement);
+    modal.show();
   }
 }

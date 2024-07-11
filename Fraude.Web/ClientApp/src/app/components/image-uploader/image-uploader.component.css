@@ -56,3 +56,12 @@ button:disabled {
     object-fit: contain;
     /* Assegura que a imagem se ajuste dentro do contêiner sem distorcer */
 }
+
+.modal-dialog {
+    max-width: 60%;
+}
+
+.modal-body img {
+    width: 50%;
+    height: auto;
+}
