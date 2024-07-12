@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fraude.Web.Resource.Settings;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Fraude.Web.Controllers
 {
@@ -7,11 +9,26 @@ namespace Fraude.Web.Controllers
     [ApiController]
     public class IpController : ControllerBase
     {
+        private readonly IpsAdministradoresSettings _options;
+        public IpController(IOptions<IpsAdministradoresSettings> options)
+        {
+            _options = options.Value;
+        }
+
+        private string Ips
+        {
+            get
+            {
+                return _options.Ip;
+            }
+        }
         [HttpGet]
         public IActionResult GetIp()
         {
             var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString();
-            return Ok(new { ip = ipAddress });
+            bool podeAcessar = Ips.Contains(ipAddress);
+
+            return Ok(new { ip = ipAddress , podeAcessar = podeAcessar });
         }
     }
 }

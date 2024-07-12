@@ -8,7 +8,6 @@ import { IpService } from '../../services/ip.service';
 })
 export class FraudeComponent implements OnInit {
   ipAddress: string | undefined;
-  ipsPermitidos: string[] = ["177.128.83.43", "177.128.84.102", "10.71.0.110","177.134.105.23"]
   podeAcessar = false;
 
   constructor(private ipService: IpService ) { }
@@ -16,8 +15,7 @@ export class FraudeComponent implements OnInit {
   ngOnInit(): void {
     this.ipService.getIp().subscribe(
       data => {
-        this.ipAddress = data.ip;
-        this.podeAcessar = this.ipsPermitidos.includes(this.ipAddress);
+        this.podeAcessar = data.podeAcessar
       },
       error => {
         console.error('Erro ao obter o endereço IP:', error);
