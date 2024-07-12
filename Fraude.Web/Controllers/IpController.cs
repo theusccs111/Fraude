@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Fraude.Web.Controllers
 {
@@ -15,11 +17,11 @@ namespace Fraude.Web.Controllers
             _options = options.Value;
         }
 
-        private string Ips
+        private List<string> Ips
         {
             get
             {
-                return _options.Ip;
+                return _options.Ip.Split(";").ToList();
             }
         }
         [HttpGet]
