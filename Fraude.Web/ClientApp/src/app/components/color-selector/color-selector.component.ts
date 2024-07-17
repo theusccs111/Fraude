@@ -8,10 +8,10 @@ import { FraudeService } from 'src/app/services/fraude.service';
 })
 export class ColorSelectorComponent implements OnInit {
   colors: any[] = [
-    {  id: 'blue', description : 'azul'},
-    { id: 'red', description: 'vermelho'},
-    { id: 'yellow', description: 'amarelo'},
-    { id: 'green', description: 'verde'}
+    { id: 'blue', description: 'azul' },
+    { id: 'red', description: 'vermelho' },
+    { id: 'yellow', description: 'amarelo' },
+    { id: 'green', description: 'verde' }
   ]
   currentColor: string | null = null;
   legends = [
@@ -22,7 +22,7 @@ export class ColorSelectorComponent implements OnInit {
   ];
 
   @Input()
-  podeAcessar : boolean
+  podeAcessar: boolean;
 
   constructor(private fraudeService: FraudeService) { }
 
@@ -30,16 +30,14 @@ export class ColorSelectorComponent implements OnInit {
     this.loadCurrentColor();
   }
 
-  onColorChange(event: Event): void {
-    const selectElement = event.target as HTMLSelectElement;
-    const selectedColor = selectElement.value;
+  onColorChange(selectedColor: string): void {
     this.updateColor(selectedColor);
   }
 
   private loadCurrentColor(): void {
     this.fraudeService.getColor().subscribe((res: any) => {
       this.currentColor = res.color;
-      },
+    },
       error => {
         console.error('Erro ao carregar a cor:', error);
       }
@@ -51,11 +49,16 @@ export class ColorSelectorComponent implements OnInit {
       color: color
     }
     this.fraudeService.saveColor(data).subscribe((res: any) => {
-        this.currentColor = color;
-      },
+      this.currentColor = color;
+    },
       error => {
         console.error('Erro ao atualizar a cor:', error);
       }
     );
+  }
+
+  getLegend(color: string): string {
+    const legend = this.legends.find(legend => legend.color === color);
+    return legend ? legend.text : '';
   }
 }
