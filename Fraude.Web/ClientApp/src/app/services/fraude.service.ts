@@ -30,15 +30,15 @@ export class FraudeService {
         return this.http.post<any>(apiurl, data);
     }
 
-    getAllImages(): Observable<any> {
+    getAllImages(data): Observable<any> {
         const apiurl = `${url2}/download`
-        return this.http.get<any>(apiurl);
+        return this.http.post<any>(apiurl, data);
     }
 
-    downloadImage(data): Observable<any> {
-        const apiurl = `${url2}/download/?fileName=${data}`
-        return this.http.get<any>(apiurl);
-    }
+    // downloadImage(data): Observable<any> {
+    //     const apiurl = `${url2}/download/?fileName=${data}`
+    //     return this.http.post<any>(apiurl, data);
+    // }
 
     saveColor(data): Observable<any> {
         const apiurl = `${url3}`

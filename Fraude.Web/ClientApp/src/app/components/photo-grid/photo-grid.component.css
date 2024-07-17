@@ -1,0 +1,84 @@
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.photo-cell {
+    border: 1px solid #ccc;
+    text-align: center;
+    aspect-ratio: 1;
+    /* Mantém os quadrados */
+}
+
+.photo-cell img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    /* Cobre o espaço mantendo a proporção */
+}
+
+.photo-title {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.image-uploader {
+    width: 80%;
+    margin: auto;
+}
+
+.upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    flex: 1;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ff0000;
+}
+
+.loading {
+    margin-top: 10px;
+}
+
+.carousel-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.picsum-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.picsum-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modal-dialog {
+    max-width: 60%;
+}
+
+.modal-body img {
+    width: 50%;
+    height: auto;
+}

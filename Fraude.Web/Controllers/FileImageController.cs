@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Fraude.Web.Resource.Request;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,11 @@ namespace Fraude.Web.Controllers
     [ApiController]
     public class FileImageController : ControllerBase
     {
-        private readonly string imagesFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads/Images");
+        private readonly string imagesDireitaFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads/ImagesDireita");
+        private readonly string imagesEsquerdaFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads/ImagesEsquerda");
 
         [HttpPost("upload")]
-        public async Task<IActionResult> UploadImages(List<IFormFile> files)
+        public async Task<IActionResult> UploadImages([FromForm] List<IFormFile> files, [FromForm] string lado)
         {
             if (files == null || files.Count == 0)
             {
@@ -25,10 +27,11 @@ namespace Fraude.Web.Controllers
             try
             {
                 var uploadedFilePaths = new List<string>();
+                string folder = lado.Equals("direita") ? imagesDireitaFolderPath : imagesEsquerdaFolderPath;
 
                 foreach (var file in files)
                 {
-                    var filePath = Path.Combine(imagesFolderPath, file.FileName);
+                    var filePath = Path.Combine(folder, file.FileName);
 
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
@@ -46,17 +49,18 @@ namespace Fraude.Web.Controllers
             }
         }
 
-        [HttpGet("download")]
-        public IActionResult GetAllImages()
+        [HttpPost("download")]
+        public IActionResult GetAllImages([FromBody] ImageRequest request)
         {
             try
             {
-                var filePaths = Directory.GetFiles(imagesFolderPath);
+                string folder = request.Lado.Equals("direita") ? imagesDireitaFolderPath : imagesEsquerdaFolderPath;
+                var filePaths = Directory.GetFiles(folder);
 
                 var imageUrls = filePaths.Select(filePath =>
                 {
                     var fileName = Path.GetFileName(filePath);
-                    var fileUrl = $"/download/{fileName}";
+                    var fileUrl = $"/download/{fileName}/{request.Lado}";
                     return new { FileName = fileName, FileUrl = fileUrl };
                 }).ToList();
 
@@ -68,10 +72,11 @@ namespace Fraude.Web.Controllers
             }
         }
 
-        [HttpGet("download/{fileName}")]
-        public IActionResult DownloadImage(string fileName)
+        [HttpGet("download/{fileName}/{lado}")]
+        public IActionResult DownloadImage(string fileName, string lado)
         {
-            var filePath = Path.Combine(imagesFolderPath, fileName);
+            string folder = lado.Equals("direita") ? imagesDireitaFolderPath : imagesEsquerdaFolderPath;
+            var filePath = Path.Combine(folder, fileName);
 
             if (!System.IO.File.Exists(filePath))
             {

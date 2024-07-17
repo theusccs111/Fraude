@@ -14,6 +14,7 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ColorSelectorComponent } from './components/color-selector/color-selector.component';
 import { FileUploaderComponent } from './components/file-uploader/file-uploader.component';
 import { ImageUploaderComponent } from './components/image-uploader/image-uploader.component';
+import { PhotoGridComponent } from './components/photo-grid/photo-grid.component';
 
 registerLocaleData(en);
 
@@ -28,6 +29,7 @@ const routes: Routes = [
     FileUploaderComponent,
     ImageUploaderComponent,
     ColorSelectorComponent,
+    PhotoGridComponent
   ],
   imports: [
     BrowserModule,

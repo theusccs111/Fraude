@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FraudeService } from 'src/app/services/fraude.service';
 import { environment } from 'src/environments/environment';
 
@@ -9,7 +9,7 @@ var url2 = environment.api + '/FileImage';
   templateUrl: './image-uploader.component.html',
   styleUrls: ['./image-uploader.component.css']
 })
-export class ImageUploaderComponent {
+export class ImageUploaderComponent implements OnInit {
   files: File[] = [];
   uploading = false;
   imageUrls: { fileName: string; fileUrl: string }[] = [];
@@ -18,8 +18,15 @@ export class ImageUploaderComponent {
 
   @Input()
   podeAcessar: boolean
+
+  @Input()
+  lado: string
   
   constructor(private fraudeService: FraudeService) {
+    
+  }
+  
+  ngOnInit(): void {
     this.loadImages();
   }
 
@@ -41,6 +48,9 @@ export class ImageUploaderComponent {
       formData.append('files', file);
     });
 
+    // Adiciona o campo 'lado' ao FormData
+    formData.append('lado', this.lado);
+
     this.fraudeService.upload(formData).subscribe(
       (res) => {
         console.log('Upload bem-sucedido:', res);
@@ -55,7 +65,11 @@ export class ImageUploaderComponent {
   }
 
   loadImages(): void {
-    this.fraudeService.getAllImages().subscribe(
+    let data = {
+      lado: this.lado
+    }
+
+    this.fraudeService.getAllImages(data).subscribe(
       (res) => {
         this.imageUrls = res;
         this.imageUrls.forEach((item:any) => {
