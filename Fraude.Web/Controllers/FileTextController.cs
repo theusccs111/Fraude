@@ -14,7 +14,6 @@ namespace Fraude.Web.Controllers
     {
         private readonly string filePath1 = Path.Combine(Directory.GetCurrentDirectory(), "Uploads/Text/msg1.txt");
         private readonly string filePath2 = Path.Combine(Directory.GetCurrentDirectory(), "Uploads/Text/msg2.txt");
-        private readonly string filePath3 = Path.Combine(Directory.GetCurrentDirectory(), "Uploads/Text/msg3.txt");
 
         [HttpPost("save")]
         public async Task<IActionResult> SaveToFile([FromBody] TextFileRequest request)
@@ -23,7 +22,6 @@ namespace Fraude.Web.Controllers
             {
                 await System.IO.File.WriteAllTextAsync(filePath1, request.Param1);
                 await System.IO.File.WriteAllTextAsync(filePath2, request.Param2);
-                await System.IO.File.WriteAllTextAsync(filePath3, request.Param3);
 
                 return Ok("File saved successfully.");
             }
@@ -36,7 +34,7 @@ namespace Fraude.Web.Controllers
         [HttpGet("read")]
         public IActionResult ReadFile()
         {
-            if (!System.IO.File.Exists(filePath1) && !System.IO.File.Exists(filePath2) && !System.IO.File.Exists(filePath3))
+            if (!System.IO.File.Exists(filePath1) && !System.IO.File.Exists(filePath2))
             {
                 return NotFound("Algum arquivo txt não existe.");
             }
@@ -45,11 +43,9 @@ namespace Fraude.Web.Controllers
             {
                 var content1 = System.IO.File.ReadAllText(filePath1);
                 var content2 = System.IO.File.ReadAllText(filePath2);
-                var content3 = System.IO.File.ReadAllText(filePath3);
                 TextFileResponse response = new TextFileResponse();
                 response.Param1 = content1;
                 response.Param2 = content2;
-                response.Param3 = content3;
 
                 return Ok(response);
             }
