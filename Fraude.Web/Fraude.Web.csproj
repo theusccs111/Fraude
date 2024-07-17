@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Uploads\ImagesEsquerda\" />
-    <Folder Include="Uploads\ImagesDireita\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

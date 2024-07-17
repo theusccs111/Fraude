@@ -1,18 +1,21 @@
-<div class="image-uploader">
-    <div class="upload-container" *ngIf="podeAcessar">
-        <input type="file" multiple (change)="onFileChange($event)" />
-        <button (click)="uploadImages()" [disabled]="!files.length">Enviar Imagens</button>
-    </div>
-    <div *ngIf="uploading" class="loading">
-        <p>Carregando...</p>
-    </div>
-    <div class="carousel-container" *ngIf="imageUrls.length">
-        <div class="photo-grid">
-            <div class="photo-cell" *ngFor="let photo of imageUrls">
+<div class="black-card">
+    <div class="image-uploader">
+        <div class="upload-container" *ngIf="podeAcessar">
+            <input type="file" multiple (change)="onFileChange($event)" />
+            <button (click)="uploadImages()" [disabled]="!files.length">Enviar Imagens</button>
+        </div>
+        <div *ngIf="uploading" class="loading">
+            <p>Carregando...</p>
+        </div>
+        <div class="carousel-container" *ngIf="imageUrls.length">
+            <div class="photo-grid">
+                <div class="photo-cell" *ngFor="let photo of imageUrls">
                     <img [src]="photo.fileUrl" [alt]="photo.fileName" (click)="showModal(photo.fileUrl)">
+                </div>
             </div>
         </div>
     </div>
+    <h1 class="alert-title">Alerta</h1>
 </div>
 
 <!-- Modal -->

@@ -31,6 +31,9 @@ export class ColorSelectorComponent implements OnInit {
   }
 
   onColorChange(selectedColor: string): void {
+    if (!this.podeAcessar){
+      return;
+    }
     this.updateColor(selectedColor);
   }
 
