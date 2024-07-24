@@ -1,4 +1,5 @@
 using Fraude.Web.Helpers;
+using Fraude.Web.Resource.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,13 @@ namespace Fraude.Web
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            InjectingConfigurations(services);
+        }
+
+        private void InjectingConfigurations(IServiceCollection services)
+        {
+            services.Configure<IpsAdministradoresSettings>(Configuration.GetSection("IpsAdministradores"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

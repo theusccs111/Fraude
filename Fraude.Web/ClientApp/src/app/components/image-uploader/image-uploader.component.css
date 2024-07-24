@@ -1,3 +1,24 @@
+.black-card {
+    background-color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    width: 460px;
+    /* Defina a largura fixa desejada */
+    height: 400px;
+    /* Defina a altura fixa desejada */
+    overflow: hidden;
+    /* Garante que o conteúdo extra não ultrapasse os limites do card */
+    margin: auto;
+    /* Centraliza o card horizontalmente */
+}
+
+.alert-title {
+    
+    color: white;
+    font-weight: bold;
+}
+
 .image-uploader {
     width: 80%;
     margin: auto;
@@ -13,6 +34,7 @@
 
 input[type="file"] {
     flex: 1;
+    color: white;
     /* Expande para ocupar o espaço disponível */
 }
 

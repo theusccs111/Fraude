@@ -1,18 +1,9 @@
 <div class="color-selector">
-    <div class="color-picker">
-        <label for="colorSelect">Status</label>
-        <select *ngIf="podeAcessar" id="colorSelect" [value]="currentColor" (change)="onColorChange($event)">
-            <option *ngFor="let color of colors" [value]="color.id">{{ color.description }}</option>
-        </select>
-    </div>
-    <div *ngIf="currentColor" class="color-display mt-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="color-circle" [ngStyle]="{'background-color': currentColor}"></div>
-                <div class="color-legend">
-                    <p *ngFor="let legend of legends" [ngStyle]="{'color': legend.color}" [innerText]="legend.text"></p>
-                </div>
-            </div>
+    <div class="color-grid">
+        <div *ngFor="let color of colors" class="color-square" [ngClass]="{'active': currentColor === color.id}"
+            (click)="onColorChange(color.id)" [ngStyle]="{'background-color': color.id}">
+            <div class="arrow-up" *ngIf="currentColor === color.id"></div>
+            <p class="color-legend" [ngClass]="color.id == 'yellow' ? 'verde-escuro' : ''">{{ getLegend(color.id) }}</p>
         </div>
     </div>
 </div>

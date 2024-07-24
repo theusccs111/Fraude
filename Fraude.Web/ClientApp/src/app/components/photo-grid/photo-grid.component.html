@@ -8,19 +8,18 @@
             <p>Carregando...</p>
         </div>
         <div class="carousel-container" *ngIf="imageUrls.length">
-            <ngb-carousel>
-                <ng-template ngbSlide *ngFor="let image of imageUrls">
-                    <div class="picsum-img-wrapper" (click)="showModal(image.fileUrl)">
-                        <img [src]="image.fileUrl" alt="{{ image.fileName }}" />
-                    </div>
-                </ng-template>
-            </ngb-carousel>
+            <div class="photo-grid">
+                <div class="photo-cell" *ngFor="let photo of imageUrls">
+                    <img [src]="photo.fileUrl" [alt]="photo.fileName" (click)="showModal(photo.fileUrl)">
+                </div>
+            </div>
         </div>
     </div>
-    <h1 class="alert-title">Mais Procurados</h1>
+    <h1 class="alert-title">Alerta</h1>
 </div>
+
 <!-- Modal -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+<div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">

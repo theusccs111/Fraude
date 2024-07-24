@@ -1,0 +1,115 @@
+.black-card {
+    background-color: #000;
+    /* Cor de fundo preto */
+    color: #fff;
+    /* Cor do texto branco */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    padding: 20px;
+    /* Espaçamento interno */
+    position: relative;
+    /* Para posicionar o título no fundo */
+    width: 460px;
+        /* Defina a largura fixa desejada */
+        height: 400px;
+    /* Tamanho total ou ajustar conforme necessário */
+    /* Ajuste o tamanho máximo conforme necessário */
+    margin: auto;
+    /* Centralizar o card */
+}
+
+.alert-title {
+    color: white;
+        font-weight: bold;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-height: 250px;
+    /* Ajuste a altura máxima conforme necessário */
+    overflow-y: auto;
+    /* Adiciona rolagem vertical se necessário */
+}
+
+.photo-cell {
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 100%;
+    /* Ajusta para ocupar toda a largura da célula */
+    height: 100%;
+    /* Ajusta para ocupar toda a altura da célula */
+}
+
+.photo-cell img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.photo-title {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.image-uploader {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    flex: 1;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #ff0000;
+}
+
+.loading {
+    margin-top: 10px;
+}
+
+.carousel-container {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.picsum-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.picsum-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modal-dialog {
+    max-width: 60%;
+}
+
+.modal-body img {
+    width: 50%;
+    height: auto;
+}
