@@ -1,51 +1,51 @@
-.color-selector {
+.color-selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.color-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.color-box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.color-box.selected {
+  border-color: black;
+}
+
+.arrow {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+
+.legend-box {
+  /* margin-top: 5rem; */
+    padding: 1rem;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.color-grid {
-    display: flex;
-    /* gap: 20px; */
-}
-
-.color-square {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    /* border-radius: 8px; */
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer;
-    color: white;
-}
-
-.color-square.active {
-    border: 2px solid #000;
-}
-
-.color-legend {
-    margin-top: 10px;
     font-weight: bold;
-}
-
-.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.verde-escuro{
-    color: darkgreen;
+    color: white;
+    border-radius: 8px;
+    height: 110px;
+    font-size: 26px;
 }

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FraudeService } from 'src/app/services/fraude.service';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
+import { FraudeService } from '../../services/fraude.service';
 
 var url2 = environment.api + '/FileImage';
 
@@ -83,12 +83,11 @@ export class PhotoGridComponent implements OnInit {
   }
 
   showModal(imageUrl: string): void {
-    debugger;
-
     this.modalImageUrl = imageUrl;
     const modalElement = document.getElementById('photoModal') as HTMLElement;
     const modal = new (window as any).bootstrap.Modal(modalElement);
     modal.show();
   }
+
 
 }

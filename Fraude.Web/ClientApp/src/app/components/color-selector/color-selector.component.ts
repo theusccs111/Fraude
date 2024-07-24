@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FraudeService } from 'src/app/services/fraude.service';
+import { FraudeService } from '../../services/fraude.service';
 
 @Component({
   selector: 'app-color-selector',
@@ -24,14 +24,14 @@ export class ColorSelectorComponent implements OnInit {
   @Input()
   podeAcessar: boolean;
 
-  constructor(private fraudeService: FraudeService) { }
+  constructor(private fraudeService : FraudeService){}
 
   ngOnInit(): void {
     this.loadCurrentColor();
   }
 
   onColorChange(selectedColor: string): void {
-    if (!this.podeAcessar){
+    if (!this.podeAcessar) {
       return;
     }
     this.updateColor(selectedColor);

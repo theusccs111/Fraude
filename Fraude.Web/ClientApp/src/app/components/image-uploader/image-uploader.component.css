@@ -1,11 +1,11 @@
 .black-card {
-    background-color: #000;
+    background-color: #000; /*paulo victor aqui muda a cor do card da esquerda*/
     border-radius: 10px;
     padding: 20px;
     color: white;
-    width: 460px;
+    width: 700px;
     /* Defina a largura fixa desejada */
-    height: 400px;
+    height: 530px;
     /* Defina a altura fixa desejada */
     overflow: hidden;
     /* Garante que o conteúdo extra não ultrapasse os limites do card */
@@ -17,6 +17,9 @@
     
     color: white;
     font-weight: bold;
+    position: relative;
+    top: 8%;
+    left: 35%
 }
 
 .image-uploader {
@@ -68,7 +71,7 @@ button:disabled {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 425px;
     /* Altura fixa para o carrossel */
 }
 
@@ -86,4 +89,10 @@ button:disabled {
 .modal-body img {
     width: 50%;
     height: auto;
+}
+
+
+.btn-close{
+    position: relative;
+    left: 95.5%;
 }

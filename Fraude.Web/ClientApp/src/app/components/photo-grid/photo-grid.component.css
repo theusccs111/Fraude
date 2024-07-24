@@ -1,5 +1,5 @@
 .black-card {
-    background-color: #000;
+    background-color: #000; /*paulo victor aqui muda a cor do card da esquerda*/
     /* Cor de fundo preto */
     color: #fff;
     /* Cor do texto branco */
@@ -9,9 +9,9 @@
     /* Espaçamento interno */
     position: relative;
     /* Para posicionar o título no fundo */
-    width: 460px;
+    width: 700px;
         /* Defina a largura fixa desejada */
-        height: 400px;
+        height: 530px;
     /* Tamanho total ou ajustar conforme necessário */
     /* Ajuste o tamanho máximo conforme necessário */
     margin: auto;
@@ -21,16 +21,21 @@
 .alert-title {
     color: white;
         font-weight: bold;
+        position: relative;
+        top: -7%;
+        left: 30%;
+        width: 52%;
 }
 
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    max-height: 250px;
+    max-height: 422px;
     /* Ajuste a altura máxima conforme necessário */
     overflow-y: auto;
     /* Adiciona rolagem vertical se necessário */
+    height: calc(100% - 150px);
 }
 
 .photo-cell {
@@ -90,6 +95,7 @@ button:disabled {
 .carousel-container {
     margin-top: 20px;
     width: 100%;
+    height: calc(100% - 120px);
 }
 
 .picsum-img-wrapper {
@@ -112,4 +118,9 @@ button:disabled {
 .modal-body img {
     width: 50%;
     height: auto;
+}
+
+.btn-close{
+    position: relative;
+    left: 95.5%;
 }

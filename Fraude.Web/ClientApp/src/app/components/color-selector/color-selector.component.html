@@ -1,9 +1,16 @@
-<div class="color-selector">
-    <div class="color-grid">
-        <div *ngFor="let color of colors" class="color-square" [ngClass]="{'active': currentColor === color.id}"
-            (click)="onColorChange(color.id)" [ngStyle]="{'background-color': color.id}">
-            <div class="arrow-up" *ngIf="currentColor === color.id"></div>
-            <p class="color-legend" [ngClass]="color.id == 'yellow' ? 'verde-escuro' : ''">{{ getLegend(color.id) }}</p>
-        </div>
+<div class="color-selector-container">
+  <div *ngIf="podeAcessar">
+  <h2>Selecione uma cor</h2>
+  <div class="color-options">
+    <div *ngFor="let color of colors" class="color-option" (click)="onColorChange(color.id)">
+      <div [ngClass]="{'color-box': true, 'selected': currentColor === color.id}" [style.backgroundColor]="color.id">
+        <div class="arrow" *ngIf="currentColor === color.id"></div>
+      </div>
+      <div>{{ color.description }}</div>
     </div>
+  </div>
+</div>
+  <div *ngIf="currentColor" class="legend-box" [style.backgroundColor]="currentColor">
+    <span>{{ getLegend(currentColor) }}</span>
+  </div>
 </div>
